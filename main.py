@@ -1,14 +1,10 @@
 from fastapi import FastAPI
-
+from endpoints import psychoterapist
 from airtablescan import air_table_map
 from db.db import db
 
-app = FastAPI()
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = FastAPI(title="Meta psychotherapists")
+app.include_router(psychoterapist.router, prefix="/psychotherapists", tags=["psychotherapists"])
 
 
 @app.on_event("startup")

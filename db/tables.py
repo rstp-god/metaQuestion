@@ -7,7 +7,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from db import metadata
 
 association_table = sqlalchemy.Table("Methods_association", metadata,
-                                     sqlalchemy.Column("user_id", UUID(as_uuid=True), sqlalchemy.ForeignKey('Psychotherapist.id')),
+                                     sqlalchemy.Column("psycho_id", UUID(as_uuid=True), sqlalchemy.ForeignKey('Psychotherapist.id')),
                                      sqlalchemy.Column("method_id", UUID(as_uuid=True), sqlalchemy.ForeignKey('Methods.method_id'))
                                      )
 

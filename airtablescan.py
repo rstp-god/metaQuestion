@@ -7,7 +7,7 @@ from schemas.airtable_schemas import AirtablePsychotherapist
 
 
 def create_connect_to_air_table():
-    air_table = Table()
+    air_table = Table('keyXPqYErsiu0bNbr', 'app3Bs3izaW0VEa3k', 'Psychotherapists')
     return air_table
 
 
